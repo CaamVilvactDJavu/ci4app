@@ -1,0 +1,117 @@
+CRITICAL - 2020-06-17 02:54:09 --> Undefined variable: nama
+#0 D:\Programmer\xampp\htdocs\ci4app\app\Views\layout\navbar.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Programmer\\x...', 3, Array)
+#1 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\View\View.php(246): include('D:\\Programmer\\x...')
+#2 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\View\View.php(525): CodeIgniter\View\View->render('layout/navbar', NULL, true)
+#3 D:\Programmer\xampp\htdocs\ci4app\app\Views\layout\template.php(20): CodeIgniter\View\View->include('layout/navbar')
+#4 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\View\View.php(246): include('D:\\Programmer\\x...')
+#5 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\View\View.php(257): CodeIgniter\View\View->render('layout/template', Array, true)
+#6 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('komik/index', Array, true)
+#7 D:\Programmer\xampp\htdocs\ci4app\app\Controllers\Komik.php(22): view('komik/index', Array)
+#8 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Komik->index()
+#9 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#10 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Programmer\xampp\htdocs\ci4app\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#12 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('D:\\Programmer\\x...')
+#13 {main}
+CRITICAL - 2020-06-17 02:54:45 --> Undefined property: CodeIgniter\View\View::$nama
+#0 D:\Programmer\xampp\htdocs\ci4app\app\Views\layout\navbar.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Programmer\\x...', 3, Array)
+#1 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\View\View.php(246): include('D:\\Programmer\\x...')
+#2 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\View\View.php(525): CodeIgniter\View\View->render('layout/navbar', NULL, true)
+#3 D:\Programmer\xampp\htdocs\ci4app\app\Views\layout\template.php(20): CodeIgniter\View\View->include('layout/navbar')
+#4 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\View\View.php(246): include('D:\\Programmer\\x...')
+#5 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\View\View.php(257): CodeIgniter\View\View->render('layout/template', Array, true)
+#6 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('komik/index', Array, true)
+#7 D:\Programmer\xampp\htdocs\ci4app\app\Controllers\Komik.php(22): view('komik/index', Array)
+#8 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Komik->index()
+#9 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#10 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Programmer\xampp\htdocs\ci4app\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#12 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('D:\\Programmer\\x...')
+#13 {main}
+CRITICAL - 2020-06-17 03:06:41 --> No connection could be made because the target machine actively refused it.
+
+#0 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Model.php(445): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Programmer\xampp\htdocs\ci4app\app\Controllers\Komik.php(16): CodeIgniter\Model->findAll()
+#5 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Komik->index()
+#6 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#7 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Programmer\xampp\htdocs\ci4app\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('D:\\Programmer\\x...')
+#10 {main}
+CRITICAL - 2020-06-17 03:11:09 --> No connection could be made because the target machine actively refused it.
+
+#0 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Model.php(445): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Programmer\xampp\htdocs\ci4app\app\Controllers\Komik.php(16): CodeIgniter\Model->findAll()
+#5 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Komik->index()
+#6 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#7 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Programmer\xampp\htdocs\ci4app\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('D:\\Programmer\\x...')
+#10 {main}
+CRITICAL - 2020-06-17 03:11:45 --> No connection could be made because the target machine actively refused it.
+
+#0 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Model.php(445): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Programmer\xampp\htdocs\ci4app\app\Controllers\Komik.php(16): CodeIgniter\Model->findAll()
+#5 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Komik->index()
+#6 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#7 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Programmer\xampp\htdocs\ci4app\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('D:\\Programmer\\x...')
+#10 {main}
+CRITICAL - 2020-06-17 23:24:40 --> No connection could be made because the target machine actively refused it.
+
+#0 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Model.php(445): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Programmer\xampp\htdocs\ci4app\app\Controllers\Komik.php(16): CodeIgniter\Model->findAll()
+#5 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Komik->index()
+#6 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#7 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Programmer\xampp\htdocs\ci4app\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('D:\\Programmer\\x...')
+#10 {main}
+CRITICAL - 2020-06-17 23:25:04 --> No connection could be made because the target machine actively refused it.
+
+#0 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Model.php(445): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Programmer\xampp\htdocs\ci4app\app\Controllers\Komik.php(16): CodeIgniter\Model->findAll()
+#5 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Komik->index()
+#6 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#7 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Programmer\xampp\htdocs\ci4app\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('D:\\Programmer\\x...')
+#10 {main}
+CRITICAL - 2020-06-17 23:42:38 --> Undefined variable: komik
+#0 D:\Programmer\xampp\htdocs\ci4app\app\Views\anime\index.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Programmer\\x...', 19, Array)
+#1 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\View\View.php(246): include('D:\\Programmer\\x...')
+#2 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('anime/index', Array, true)
+#3 D:\Programmer\xampp\htdocs\ci4app\app\Controllers\Anime.php(24): view('anime/index', Array)
+#4 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Anime->index()
+#5 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anime))
+#6 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Programmer\xampp\htdocs\ci4app\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('D:\\Programmer\\x...')
+#9 {main}
+CRITICAL - 2020-06-17 23:43:18 --> Undefined variable: k
+#0 D:\Programmer\xampp\htdocs\ci4app\app\Views\anime\index.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Programmer\\x...', 22, Array)
+#1 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\View\View.php(246): include('D:\\Programmer\\x...')
+#2 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('anime/index', Array, true)
+#3 D:\Programmer\xampp\htdocs\ci4app\app\Controllers\Anime.php(24): view('anime/index', Array)
+#4 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Anime->index()
+#5 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anime))
+#6 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Programmer\xampp\htdocs\ci4app\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('D:\\Programmer\\x...')
+#9 {main}

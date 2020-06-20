@@ -1,0 +1,32 @@
+CRITICAL - 2020-06-12 05:13:11 --> Invalid file: home.php
+#0 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home.php')
+#1 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('home', Array, true)
+#2 D:\Programmer\xampp\htdocs\ci4app\app\Controllers\Pages.php(9): view('home')
+#3 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Pages->index()
+#4 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#5 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Programmer\xampp\htdocs\ci4app\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('D:\\Programmer\\x...')
+#8 {main}
+CRITICAL - 2020-06-12 05:54:28 --> Undefined variable: title
+#0 D:\Programmer\xampp\htdocs\ci4app\app\Views\layout\header.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Programmer\\x...', 12, Array)
+#1 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\View\View.php(246): include('D:\\Programmer\\x...')
+#2 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('layout/header', Array, true)
+#3 D:\Programmer\xampp\htdocs\ci4app\app\Controllers\Pages.php(18): view('layout/header')
+#4 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Pages->about()
+#5 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#6 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Programmer\xampp\htdocs\ci4app\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('D:\\Programmer\\x...')
+#9 {main}
+CRITICAL - 2020-06-12 05:56:36 --> Array to string conversion
+#0 D:\Programmer\xampp\htdocs\ci4app\app\Views\pages\home.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'D:\\Programmer\\x...', 5, Array)
+#1 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\View\View.php(246): include('D:\\Programmer\\x...')
+#2 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('pages/home', Array, true)
+#3 D:\Programmer\xampp\htdocs\ci4app\app\Controllers\Pages.php(14): view('pages/home')
+#4 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Pages->index()
+#5 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#6 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Programmer\xampp\htdocs\ci4app\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 D:\Programmer\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('D:\\Programmer\\x...')
+#9 {main}
