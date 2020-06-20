@@ -19,7 +19,7 @@
                     <?php foreach ($anime as $a) : ?>
                         <tr>
                             <th scope="row"><?= $i++; ?></th>
-                            <td><img src="/img/<?= $a['sampul']; ?>" alt="" width="100"></td>
+                            <td><img src="/img/<?= $a['sampul']; ?>" alt="" width="150"></td>
                             <td><?= $a['judul']; ?></td>
                             <td>
                                 <a href="" class="btn btn-success">Detail</a>
