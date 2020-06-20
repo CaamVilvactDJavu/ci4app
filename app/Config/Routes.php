@@ -37,6 +37,9 @@ $routes->get('/', 'Pages::index');
 $routes->get('/komik/(:segment)', 'Komik::detail/$1');
 
 
+$routes->get('/anime/(:segment)', 'Anime::detail/$1');
+
+
 
 /**
  * --------------------------------------------------------------------

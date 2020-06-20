@@ -22,7 +22,7 @@
                             <td><img src="/img/<?= $a['sampul']; ?>" alt="" width="150"></td>
                             <td><?= $a['judul']; ?></td>
                             <td>
-                                <a href="" class="btn btn-success">Detail</a>
+                                <a href="/anime/<?= $a['slug']; ?> " class="btn btn-success">Detail</a>
                             </td>
                         </tr>
                         <tr>

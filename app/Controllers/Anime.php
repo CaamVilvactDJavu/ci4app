@@ -13,14 +13,24 @@ class Anime extends BaseController
     }
     public function index()
     {
-        $anime = $this->animeModel->findAll();
+        // $anime = $this->animeModel->findAll();
         $data = [
             'title' => 'Daftar Anime',
-            'anime' => $anime
+            'anime' => $this->animeModel->getAnime()
         ];
 
 
 
         return view('anime/index', $data);
+    }
+
+    public function detail($slug)
+    {
+
+        $data = [
+            'title' => 'Detail Anime',
+            'anime' => $this->animeModel->getAnime($slug)
+        ];
+        return view('anime/detail', $data);
     }
 }
