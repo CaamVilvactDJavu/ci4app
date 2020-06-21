@@ -5,10 +5,10 @@
     <div class="row">
         <div class="col">
             <h2 class="mt-2">Detail Anime</h2>
-            <div class="card mb-3" style="max-width: 540px;">
+            <div class="card border-dark mb-3" style="max-width: 540px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
-                        <img src="/img/<?= $anime['sampul']; ?>" class="card-img" alt="...">
+                        <img src="/img/<?= $anime['sampul']; ?>" class="card-img" style="height:7cm" alt="...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
@@ -19,7 +19,7 @@
                             <a href="" class="btn btn-warning">Edit</a>
                             <a href="" class="btn btn-danger">Delete</a>
                             <br><br>
-                            <a href="/anime">Kembali ke daftar Anime</a>
+                            <a href="/anime" class="btn btn-dark">Kembali ke daftar Anime</a>
                         </div>
                     </div>
                 </div>

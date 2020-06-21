@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col">
             <h2 class="mt-2">Detail Komik</h2>
-            <div class="card mb-3" style="max-width: 540px;">
+            <div class=" card border-dark mb-3" style="max-width: 540px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
                         <img src="/img/<?= $komik['sampul']; ?>" class="card-img" alt="...">
@@ -19,7 +19,7 @@
                             <a href="" class="btn btn-warning">Edit</a>
                             <a href="" class="btn btn-danger">Delete</a>
                             <br><br>
-                            <a href="/komik">Kembali ke daftar komik</a>
+                            <a href="/komik" class="btn btn-dark">Kembali ke daftar komik</a>
                         </div>
                     </div>
                 </div>
