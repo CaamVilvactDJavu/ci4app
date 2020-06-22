@@ -36,6 +36,7 @@ $routes->get('/', 'Pages::index');
 $routes->get('/komik/create', 'komik::create');
 $routes->get('/komik/(:segment)', 'Komik::detail/$1');
 
+$routes->get('/anime/create', 'anime::create');
 $routes->get('/anime/(:segment)', 'Anime::detail/$1');
 
 

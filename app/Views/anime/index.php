@@ -4,7 +4,13 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h1 class="mt-2" style="font-family:Hack;">List Anime</h1>
+            <a href="/anime/create" class="btn btn-dark mt-3">Add list anime</a>
+            <h1 class="mt-2">List Anime</h1>
+            <?php if (session()->getFlashdata('pesan')) : ?>
+                <div class="alert alert-success" role="alert">
+                    <?= session()->getFlashdata('pesan'); ?>
+                </div>
+            <?php endif; ?>
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
