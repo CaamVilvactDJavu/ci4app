@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h2 class="mt-2" style="font-family:Hack;">Detail Anime</h2>
+            <h2 class="mt-2" style="font-style: italic;">Detail Anime</h2>
             <div class="card border-dark mb-3" style="max-width: 400px;">
                 <div class="row no-gutters">
                     <div class="col-md-12">

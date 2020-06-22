@@ -39,7 +39,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary">Add an anime list</button>
+                        <button type="submit" class="btn btn-dark">Add an anime list</button>
                     </div>
                 </div>
             </form>
