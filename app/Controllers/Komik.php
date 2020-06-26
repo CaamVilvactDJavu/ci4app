@@ -48,6 +48,7 @@ class Komik extends BaseController
     public function save()
     {
         // validasi input
+
         if (!$this->validate([
             'judul' => [
                 'rules' => 'required|is_unique[komik.judul]',
@@ -57,13 +58,13 @@ class Komik extends BaseController
                 ]
             ],
             'penulis' => [
-                'rules' => 'required|is_unique[komik.penulis]',
+                'rules' => 'required[komik.penulis]',
                 'errors' => [
                     'required' => '{field} komik harus diisi.'
                 ]
             ],
             'penerbit' => [
-                'rules' => 'required|is_unique[komik.penerbit]',
+                'rules' => 'required[komik.penerbit]',
                 'errors' => [
                     'required' => '{field} komik harus diisi.'
                 ]

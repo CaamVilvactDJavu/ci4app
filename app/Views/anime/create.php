@@ -10,31 +10,46 @@
                 <div class="form-group row">
                     <label for="judul" class="col-sm-2 col-form-label">Title</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="judul" name="judul" autofocus>
+                        <input type="text" class="form-control <?= ($validation->hasError('judul')) ? 'is-invalid' : ''; ?>" id="judul" name="judul" autofocus value="<?= old('judul'); ?>">
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('judul'); ?>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="penulis" class="col-sm-2 col-form-label">Written by</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="penulis" name="penulis">
+                        <input type="text" class="form-control <?= ($validation->hasError('penulis')) ? 'is-invalid' : ''; ?>" id="penulis" name="penulis" value="<?= old('penulis'); ?>">
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('penulis'); ?>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="lisensi" class="col-sm-2 col-form-label">Licenssed by</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="lisensi" name="lisensi">
+                        <input type="text" class="form-control <?= ($validation->hasError('lisensi')) ? 'is-invalid' : ''; ?>" id="lisensi" name="lisensi" value="<?= old('lisensi'); ?>">
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('lisensi'); ?>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="keterangan" class="col-sm-2 col-form-label">Description</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="keterangan" name="keterangan">
+                        <input type="text" class="form-control <?= ($validation->hasError('keterangan')) ? 'is-invalid' : ''; ?>" id="keterangan" name="keterangan" value="<?= old('keterangan'); ?>">
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('keterangan'); ?>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="sampul" class="col-sm-2 col-form-label">Cover</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="sampul" name="sampul">
+                        <input type="text" class="form-control <?= ($validation->hasError('sampul')) ? 'is-invalid' : ''; ?>" id="sampul" name="sampul" value="<?= old('sampul'); ?>">
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('sampul'); ?>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group row">
