@@ -39,18 +39,46 @@ class Komik extends BaseController
     public function create()
     {
         $data = [
-            'title' => 'Form Tambah Data Komik'
+            'title' => 'Form Tambah Data Komik',
+            'validation' => \Config\Services::validation()
         ];
         return view('komik/create', $data);
     }
 
     public function save()
     {
+        // validasi input
+        if (!$this->validate([
+            'judul' => [
+                'rules' => 'required|is_unique[komik.judul]',
+                'errors' => [
+                    'required' => '{field} komik harus diisi.',
+                    'is_unique' => '{field} komik sudah terdaftar.'
+                ]
+            ],
+            'penulis' => [
+                'rules' => 'required|is_unique[komik.penulis]',
+                'errors' => [
+                    'required' => '{field} komik harus diisi.'
+                ]
+            ],
+            'penerbit' => [
+                'rules' => 'required|is_unique[komik.penerbit]',
+                'errors' => [
+                    'required' => '{field} komik harus diisi.'
+                ]
+            ],
+        ])) {
+            $validation = \Config\Services::validation();
+            return redirect()->to('/komik/create')->withInput()->with('validation', $validation);
+        }
+
         $slug = url_title($this->request->getVar('judul'), '-', true);
         $this->komikModel->save([
             'judul' => $this->request->getVar('judul'),
             'slug' => $slug,
-            'penulis' => $this->request->getVar('penulis'), 'penerbit' => $this->request->getVar('penerbit'),
+            'penulis' => $this->request->getVar('penulis'),
+            'penerbit' => $this->request->getVar('penerbit'),
             'sampul' => $this->request->getVar('sampul')
         ]);
 
