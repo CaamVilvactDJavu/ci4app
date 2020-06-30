@@ -33,11 +33,14 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Pages::index');
 
-$routes->get('/komik/create', 'komik::create');
-$routes->get('/komik/(:segment)', 'Komik::detail/$1');
+$routes->get('/komik/create', 'Komik::create');
+$routes->get('/komik/edit/(:segment)', 'Komik::edit/$1');
+$routes->delete('/komik/(:num)', 'Komik::delete/$1');
+$routes->get('/komik/(:any)', 'Komik::detail/$1');
 
-$routes->get('/anime/create', 'anime::create');
-$routes->get('/anime/(:segment)', 'Anime::detail/$1');
+$routes->get('/anime/create', 'Anime::create');
+$routes->delete('/anime/(:num)', 'Anime::delete/$1');
+$routes->get('/anime/(:any)', 'Anime::detail/$1');
 
 
 
