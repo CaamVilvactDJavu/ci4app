@@ -16,8 +16,14 @@
                             <a class="card-text"><b>Written by: </b><?= $anime['penulis']; ?> </a><br>
                             <a class="card-text"><b>Licenssed by : </b><?= $anime['lisensi']; ?> </a>
                             <p class="card-text"><small class="text-muted"><b></b> <?= $anime['keterangan']; ?></small></p>
-                            <a href="" class="btn btn-warning">Edit</a>
-                            <a href="" class="btn btn-danger">Delete</a>
+                            <a href="/anime/edit/<?= $anime['slug']; ?>" class="btn btn-warning">Edit</a>
+                            <form action="/anime/<?= $anime['id']; ?>" method="post" class="d-inline">
+                                <?= csrf_field(); ?>
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure to delete?');">
+                                    Delete
+                                </button>
+                            </form>
                             <br><br>
                             <a href="/anime" class="btn btn-dark">Back to Anime list</a>
                         </div>
