@@ -15,7 +15,7 @@ class Anime extends BaseController
     {
         // $anime = $this->animeModel->findAll();
         $data = [
-            'title' => 'Daftar Anime',
+            'title' => 'List Anime',
             'anime' => $this->animeModel->getAnime()
         ];
         return view('anime/index', $data);
