@@ -37,7 +37,7 @@
                 <div class="form-group row">
                     <label for="keterangan" class="col-sm-2 col-form-label">Description</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control <?= ($validation->hasError('keterangan')) ? 'is-invalid' : ''; ?>" id="keterangan" name="keterangan" value="<?= old('keterangan'); ?>">
+                        <textarea rows="5" cols="30" type="text" class="form-control <?= ($validation->hasError('keterangan')) ? 'is-invalid' : ''; ?>" id="keterangan" name="keterangan" value="<?= old('keterangan'); ?>"></textarea>
                         <div class="invalid-feedback">
                             <?= $validation->getError('keterangan'); ?>
                         </div>
