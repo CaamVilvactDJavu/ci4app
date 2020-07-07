@@ -5,9 +5,10 @@
     <div class="row">
         <div class="col">
             <h2 class="my-3" style="font-style: italic;">Form changes a list of anime</h2>
-            <form action="/anime/update/<?= $anime['id']; ?>" method="post">
+            <form action="/anime/update/<?= $anime['id']; ?>" method="post" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
                 <input type="hidden" name="slug" value="<?= $anime['slug']; ?>">
+                <input type="hidden" name="sampulLama" value="<?= $anime['sampul']; ?>">
                 <div class="form-group row">
                     <label for="judul" class="col-sm-2 col-form-label">Title</label>
                     <div class="col-sm-10">
@@ -46,10 +47,16 @@
                 </div>
                 <div class="form-group row">
                     <label for="sampul" class="col-sm-2 col-form-label">Cover</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control <?= ($validation->hasError('sampul')) ? 'is-invalid' : ''; ?>" id="sampul" name="sampul" value="<?= (old('sampul')) ? old('sampul') : $anime['sampul']; ?>">
-                        <div class="invalid-feedback">
-                            <?= $validation->getError('sampul'); ?>
+                    <div class="col-sm-2">
+                        <img src="/img/<?= $anime['sampul']; ?>" class="img-thumbnail img-preview">
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input <?= ($validation->hasError('sampul')) ? 'is-invalid' : ''; ?>" id="sampul" name="sampul" onchange="previewImg()">
+                            <div class="invalid-feedback">
+                                <?= $validation->getError('sampul'); ?>
+                            </div>
+                            <label class="custom-file-label" for="Sampul"><?= $anime['sampul']; ?></label>
                         </div>
                     </div>
                 </div>

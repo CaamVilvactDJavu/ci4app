@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col">
             <h2 class="my-3" style="font-style: italic;">Form add a list of anime</h2>
-            <form action="/anime/save" method="post">
+            <form action="/anime/save" method="post" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
                 <div class="form-group row">
                     <label for="judul" class="col-sm-2 col-form-label">Title</label>
@@ -45,10 +45,16 @@
                 </div>
                 <div class="form-group row">
                     <label for="sampul" class="col-sm-2 col-form-label">Cover</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control <?= ($validation->hasError('sampul')) ? 'is-invalid' : ''; ?>" id="sampul" name="sampul" value="<?= old('sampul'); ?>">
-                        <div class="invalid-feedback">
-                            <?= $validation->getError('sampul'); ?>
+                    <div class="col-sm-2">
+                        <img src="/img/default.jpg" class="img-thumbnail img-preview">
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input <?= ($validation->hasError('sampul')) ? 'is-invalid' : ''; ?>" id="sampul" name="sampul" onchange="previewImg()">
+                            <div class="invalid-feedback">
+                                <?= $validation->getError('sampul'); ?>
+                            </div>
+                            <label class="custom-file-label" for="Sampul">Choose cover</label>
                         </div>
                     </div>
                 </div>
