@@ -14,9 +14,12 @@ class Anime extends BaseController
     public function index()
     {
         // $anime = $this->animeModel->findAll();
+        $pager = \Config\Services::pager();
         $data = [
             'title' => 'List Anime',
-            'anime' => $this->animeModel->getAnime()
+            'anime' => $this->animeModel->getAnime(),
+            'anime' => $this->animeModel->paginate(5),
+            'pager' => $this->animeModel->pager
         ];
         return view('anime/index', $data);
     }
