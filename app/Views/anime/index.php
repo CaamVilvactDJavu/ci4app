@@ -38,5 +38,5 @@
         </div>
     </div>
 </div>
-<?= $pager->links(); ?>
+<?php echo $pager->links('bootstrap', 'bootstrap_pagination') ?>
 <?= $this->endSection(); ?>
