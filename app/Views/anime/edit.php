@@ -28,11 +28,20 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="lisensi" class="col-sm-2 col-form-label">Licenssed by</label>
+                    <label for="penerbit" class="col-sm-2 col-form-label">Published by</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control <?= ($validation->hasError('lisensi')) ? 'is-invalid' : ''; ?>" id="lisensi" name="lisensi" value="<?= (old('lisensi')) ? old('lisensi') : $anime['lisensi']; ?>">
+                        <input type="text" class="form-control <?= ($validation->hasError('penerbit')) ? 'is-invalid' : ''; ?>" id="penerbit" name="penerbit" value="<?= (old('penerbit')) ? old('penerbit') : $anime['penerbit']; ?>">
                         <div class="invalid-feedback">
-                            <?= $validation->getError('lisensi'); ?>
+                            <?= $validation->getError('penerbit'); ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="genre" class="col-sm-2 col-form-label">Genre</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control <?= ($validation->hasError('genre')) ? 'is-invalid' : ''; ?>" id="genre" name="genre" value="<?= (old('genre')) ? old('genre') : $anime['genre']; ?>">
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('genre'); ?>
                         </div>
                     </div>
                 </div>

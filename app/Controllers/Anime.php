@@ -65,8 +65,14 @@ class Anime extends BaseController
                     'required' => 'Anime writer must be filled in.'
                 ]
             ],
-            'lisensi' => [
-                'rules' => 'required[anime.lisensi]',
+            'penerbit' => [
+                'rules' => 'required[anime.penerbit]',
+                'errors' => [
+                    'required' => 'Anime license must be filled.'
+                ]
+            ],
+            'genre' => [
+                'rules' => 'required[anime.genre]',
                 'errors' => [
                     'required' => 'Anime license must be filled.'
                 ]
@@ -108,7 +114,8 @@ class Anime extends BaseController
             'judul' => $this->request->getVar('judul'),
             'slug' => $slug,
             'penulis' => $this->request->getVar('penulis'),
-            'lisensi' => $this->request->getVar('lisensi'),
+            'penerbit' => $this->request->getVar('penerbit'),
+            'genre' => $this->request->getVar('genre'),
             'keterangan' => $this->request->getVar('keterangan'),
             'sampul' => $namaSampul
         ]);
@@ -164,8 +171,14 @@ class Anime extends BaseController
                     'required' => 'Anime writer must be filled in.'
                 ]
             ],
-            'lisensi' => [
-                'rules' => 'required[anime.lisensi]',
+            'penerbit' => [
+                'rules' => 'required[anime.penerbit]',
+                'errors' => [
+                    'required' => 'Anime license must be filled.'
+                ]
+            ],
+            'genre' => [
+                'rules' => 'required[anime.genre]',
                 'errors' => [
                     'required' => 'Anime license must be filled.'
                 ]
@@ -208,12 +221,13 @@ class Anime extends BaseController
             'judul' => $this->request->getVar('judul'),
             'slug' => $slug,
             'penulis' => $this->request->getVar('penulis'),
-            'lisensi' => $this->request->getVar('lisensi'),
+            'penerbit' => $this->request->getVar('penerbit'),
+            'genre' => $this->request->getVar('genre'),
             'keterangan' => $this->request->getVar('keterangan'),
             'sampul' => $namaSampul
         ]);
 
-        session()->setFlashdata('pesan', 'Data successfully added.');
+        session()->setFlashdata('pesan', 'Data edited successfully.');
 
         return redirect()->to('/anime');
     }

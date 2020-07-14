@@ -14,7 +14,8 @@
                         <div class="card-body">
                             <h5 class="card-title"><?= $anime['judul']; ?></h5>
                             <a class="card-text"><b>Written by: </b><?= $anime['penulis']; ?> </a><br>
-                            <a class="card-text"><b>Licenssed by : </b><?= $anime['lisensi']; ?> </a>
+                            <a class="card-text"><b>Published by : </b><?= $anime['penerbit']; ?> </a><br>
+                            <a class="card-text"><b>Genre : </b><?= $anime['genre']; ?> </a>
                             <p class="card-text"><small class="text-muted"><b></b> <?= $anime['keterangan']; ?></small></p>
                             <a href="/anime/edit/<?= $anime['slug']; ?>" class="btn btn-warning">Edit</a>
                             <form action="/anime/<?= $anime['id']; ?>" method="post" class="d-inline">
