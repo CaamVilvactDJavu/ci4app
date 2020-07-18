@@ -9,6 +9,7 @@
                 <a class="nav-item nav-link active" href="/">Home</a>
                 <a class="nav-item nav-link" href="/pages/about">About</a>
                 <a class="nav-item nav-link" href="/pages/contact">Contact</a>
+                <a class="nav-item nav-link" href="/orang">Orang</a>
                 <a class="nav-item nav-link" href="/komik">Komik</a>
                 <a class="nav-item nav-link" href="/anime">Anime</a>
             </div>
