@@ -13,14 +13,21 @@ class Anime extends BaseController
     }
     public function index()
     {
-        // $anime = $this->animeModel->findAll();
-        $pager = \Config\Services::pager();
-        $model = new \App\Models\AnimeModel();
+        $currentPage = $this->request->getVar('page_anime') ? $this->request->getVar('page_anime') : 1;
+
+        $keyword = $this->request->getVar('keyword');
+        if ($keyword) {
+            $anime = $this->animeModel->search($keyword);
+        } else {
+            $anime = $this->animeModel;
+        }
+
         $data = [
             'title' => 'List Anime',
-            'anime' => $this->animeModel->getAnime(),
-            'anime' => $model->paginate(5, 'bootstrap'),
-            'pager' => $model->pager
+            // 'anime' => $this->animeModel->getAnime(),
+            'anime' => $anime->paginate(5, 'anime'),
+            'pager' => $this->animeModel->pager,
+            'currentPage' => $currentPage
         ];
         return view('anime/index', $data);
     }

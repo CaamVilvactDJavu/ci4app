@@ -8,7 +8,7 @@ class AnimeModel extends Model
 {
     protected $table = 'anime';
     protected $useTimestamps = true;
-    protected $allowedFields = ['judul', 'slug', 'penulis', 'penerbit','genre', 'keterangan', 'sampul'];
+    protected $allowedFields = ['judul', 'slug', 'penulis', 'penerbit', 'genre', 'keterangan', 'sampul'];
 
     public function getAnime($slug = false)
     {
@@ -16,5 +16,12 @@ class AnimeModel extends Model
             return $this->findAll();
         }
         return $this->where(['slug' => $slug])->first();
+    }
+    public function search($keyword)
+    {
+        //    $builder = $this->table('anime');
+        //    $builder->like('judul', $keyword);
+        //    return $builder;
+        return $this->table('anime')->like('judul', $keyword)->orLike('genre', $keyword);
     }
 }

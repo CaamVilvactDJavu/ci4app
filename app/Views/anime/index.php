@@ -3,9 +3,23 @@
 <?= $this->section('content'); ?>
 <div class="container">
     <div class="row">
-        <div class="col">
-            <a href="/anime/create" class="btn btn-dark mt-3">Add list anime</a>
+        <div class="col-6">
             <h1 class="mt-2" style="font-style:italic;">List Anime</h1>
+            <form action="" method="post">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search keyword . . ." name="keyword">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit" name="submit">Search</button>
+                    </div>
+                    <div>
+                        <a href="/anime/create" class="btn btn-dark px-12">Add list anime</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
             <?php if (session()->getFlashdata('pesan')) : ?>
                 <div class="alert alert-success" role="alert">
                     <?= session()->getFlashdata('pesan'); ?>
@@ -22,7 +36,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php $i = 1; ?>
+                    <?php $i = 1 + (6 * ($currentPage - 1)); ?>
                     <?php foreach ($anime as $a) : ?>
                         <tr class="table-light">
                             <td scope="row"><?= $i++; ?></td>
@@ -37,8 +51,8 @@
                         <?php endforeach; ?>
                 </tbody>
             </table>
+            <?php echo $pager->links('anime', 'bootstrap_pagination') ?>
         </div>
     </div>
 </div>
-<?php echo $pager->links('bootstrap', 'bootstrap_pagination') ?>
 <?= $this->endSection(); ?>

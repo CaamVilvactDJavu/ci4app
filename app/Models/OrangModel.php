@@ -12,9 +12,9 @@ class OrangModel extends Model
 
     public function search($keyword)
     {
-    //    $builder = $this->table('orang');
-    //    $builder->like('nama', $keyword);
-    //    return $builder;
-    return $this->table('orang')->like('nama', $keyword)->orLike('alamat', $keyword);
+        //    $builder = $this->table('orang');
+        //    $builder->like('nama', $keyword);
+        //    return $builder;
+        return $this->table('orang')->like('nama', $keyword)->orLike('alamat', $keyword);
     }
 }

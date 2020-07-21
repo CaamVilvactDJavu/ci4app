@@ -4,15 +4,15 @@
 <div class="container">
     <div class="row">
         <div class="col-6">
-        <h1 class="mt-2" style="font-style:italic;">Daftar Orang</h1>
-        <form action="" method="post">
-            <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Masukkan keyword pencarian.." name="keyword">
-                <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="submit" name="submit">Cari</button>
+            <h1 class="mt-2" style="font-style:italic;">Daftar Orang</h1>
+            <form action="" method="post">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Masukkan keyword pencarian.." name="keyword">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit" name="submit">Cari</button>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
         </div>
     </div>
     <div class="row">
